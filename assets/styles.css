@@ -1,0 +1,244 @@
+/* Household Budget Basics — one stylesheet for site and worksheets.
+   Warm, calm, high-contrast. No tracking, no webfonts, no external requests. */
+
+:root {
+  --ink: #2b2a28;
+  --muted: #6b6560;
+  --paper: #faf7f2;
+  --card: #ffffff;
+  --accent: #b4552d;
+  --accent-dark: #8f4323;
+  --accent-soft: #f6e3d8;
+  --line: #e5ddd3;
+  --ok: #3f6b4f;
+  font-size: 17px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.65;
+}
+
+/* ---------- chapter pages ---------- */
+
+.layout { display: flex; min-height: 100vh; }
+
+.toc {
+  width: 18rem;
+  flex: none;
+  background: #f1ebe2;
+  border-right: 1px solid var(--line);
+  padding: 1.5rem 1rem 3rem;
+}
+
+.toc .site-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--accent-dark);
+  margin: 0 0 0.25rem;
+}
+
+.toc .site-sub { font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; }
+
+.toc ol { list-style: none; margin: 0; padding: 0; }
+
+.toc li { margin: 2px 0; }
+
+.toc a {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1.35;
+}
+
+.toc a:hover { background: var(--accent-soft); }
+
+.toc a[aria-current="page"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+main.chapter {
+  flex: 1;
+  min-width: 0;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ---------- typography ---------- */
+
+h1, h2, h3, h4 { font-family: 'Trebuchet MS', Verdana, sans-serif; line-height: 1.25; color: var(--accent-dark); }
+
+h1 { font-size: 1.9rem; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 0.7rem; }
+h3 { font-size: 1.08rem; margin: 1.6rem 0 0.5rem; }
+h4 { font-size: 0.98rem; margin: 1.2rem 0 0.4rem; color: var(--ink); }
+
+p { margin: 0.8rem 0; }
+
+a { color: var(--accent-dark); }
+
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.35rem 0; }
+
+blockquote {
+  margin: 1.2rem 0;
+  padding: 0.8rem 1.2rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  background: #efe9df;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.prev-next a {
+  text-decoration: none;
+  padding: 0.6rem 0.9rem;
+  background: var(--accent-soft);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ---------- tables (guide) ---------- */
+
+.chapter table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+}
+
+.chapter th, .chapter td {
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.chapter th { background: #f1ebe2; font-family: 'Trebuchet MS', Verdana, sans-serif; }
+
+/* ---------- worksheets ---------- */
+
+body.worksheet { max-width: 52rem; margin: 0 auto; }
+
+body.worksheet > header { padding: 2rem 1.5rem 0.5rem; }
+body.worksheet > header a { font-size: 0.85rem; text-decoration: none; }
+body.worksheet > header h1 { margin: 0.6rem 0 0.2rem; }
+body.worksheet > header p { color: var(--muted); margin: 0; }
+
+body.worksheet main { padding: 0 1.5rem 2rem; }
+
+table.fill {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.6rem 0 1.4rem;
+}
+
+table.fill th, table.fill td {
+  border: 1px solid var(--line);
+  padding: 4px 6px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+table.fill th { background: #f1ebe2; font-family: 'Trebuchet MS', Verdana, sans-serif; font-size: 0.82rem; }
+
+table.fill input, table.fill textarea,
+body.worksheet textarea {
+  width: 100%;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+table.fill input:focus, body.worksheet textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+input.day { width: 4.5em; }
+.rowlabel { width: 16rem; }
+textarea { min-height: 3.2em; }
+
+ol.date-steps li { margin: 1rem 0 1.4rem; }
+.note { font-size: 0.88rem; color: var(--muted); }
+.rules li { margin: 0.5rem 0; }
+
+body.worksheet > footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1.5rem;
+  background: #f1ebe2;
+  border-top: 1px solid var(--line);
+}
+
+body.worksheet > footer button {
+  font-family: 'Trebuchet MS', Verdana, sans-serif;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border: 1px solid var(--accent-dark);
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+body.worksheet > footer button:hover { background: var(--accent-dark); }
+
+.foot-note { font-size: 0.72rem; color: var(--muted); }
+
+/* ---------- print ---------- */
+
+@media print {
+  .toc, .prev-next, body.worksheet > footer, header a[href="javascript:void(0)"] { display: none; }
+  body { font-size: 11pt; background: #fff; }
+  body.worksheet { max-width: none; margin: 0; }
+  .layout { display: block; }
+  main.chapter { max-width: none; padding: 0; }
+  table.fill input, table.fill textarea, body.worksheet textarea { border: none; border-bottom: 1px solid #999; border-radius: 0; background: none; }
+  output[data-median-output] { font-weight: bold; }
+}

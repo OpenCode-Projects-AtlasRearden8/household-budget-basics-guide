@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sinking Funds — Household Budget Basics</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="worksheet">
+<header>
+  <a href="../index.html">&larr; Back to the guide</a>
+  <h1>Sinking Funds</h1>
+  <p>Round math, short list. Monthly slice = (last year's cost, rounded up) &divide; 12. See Chapter 3.</p>
+</header>
+<main>
+<form>
+  <table class="fill">
+    <thead><tr><th>Fund name</th><th>Last year's cost</th><th>Rounded-up total</th><th>&divide; by</th><th>Monthly slice</th><th>Where it lives (bank/nickname)</th></tr></thead>
+    <tbody>
+      <tr><td><input placeholder="Car &amp; transport"></td><td><input placeholder="$730"></td><td><input placeholder="$750"></td><td><input value="12" readonly></td><td><input placeholder="$63"></td><td><input></td></tr>
+      <tr><td><input placeholder="Health &amp; pets"></td><td><input></td><td><input></td><td><input value="12" readonly></td><td><input></td><td><input></td></tr>
+      <tr><td><input placeholder="Holidays &amp; gifts"></td><td><input></td><td><input></td><td><input value="12" readonly></td><td><input></td><td><input></td></tr>
+      <tr><td><input></td><td><input></td><td><input></td><td><input value="12" readonly></td><td><input></td><td><input></td></tr>
+      <tr><td><input></td><td><input></td><td><input></td><td><input value="12" readonly></td><td><input></td><td><input></td></tr>
+    </tbody>
+  </table>
+  <h2>Un-known-cost funds (pick a non-terrifying number)</h2>
+  <table class="fill">
+    <thead><tr><th>Fund</th><th>Monthly slice (a guess is fine)</th><th>Calibrate by this date</th></tr></thead>
+    <tbody>
+      <tr><td><input placeholder="Vet &amp; medical extras"></td><td><input placeholder="$40"></td><td><input placeholder="Next yearly sweep"></td></tr>
+      <tr><td><input></td><td><input></td><td><input></td></tr>
+    </tbody>
+  </table>
+  <h2>The kindness rules (copy to the fridge if helpful)</h2>
+  <ul class="rules">
+    <li>Borrowing from a fund is allowed — borrow from the least urgent one, then log the loan below.</li>
+    <li>Refill immediately after use, at the next weekly money date.</li>
+    <li>Close funds that finish their job; move the remainder somewhere it's felt.</li>
+  </ul>
+  <h2>Fund loans &amp; refills log</h2>
+  <table class="fill">
+    <thead><tr><th>Date</th><th>Borrowed / refilled</th><th>Amount</th><th>Repay plan</th></tr></thead>
+    <tbody>
+      <tr><td><input class="day"></td><td><input></td><td><input></td><td><input placeholder="Refill $25/mo from splurge"></td></tr>
+      <tr><td><input class="day"></td><td><input></td><td><input></td><td><input></td></tr>
+      <tr><td><input class="day"></td><td><input></td><td><input></td><td><input></td></tr>
+    </tbody>
+  </table>
+</form>
+</main>
+<script src="../assets/worksheets.js"></script>
+<footer>
+  <button data-action="print">Print</button>
+  <button data-action="clear">Clear this page</button>
+  <span class="foot-note">Saves in this browser only. Nothing is uploaded. Household Budget Basics — Asdale Dynamics, LLC</span>
+</footer>
+</body>
+</html>

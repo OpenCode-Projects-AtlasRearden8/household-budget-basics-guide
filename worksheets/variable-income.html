@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variable Income — Household Budget Basics</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="worksheet">
+<header>
+  <a href="../index.html">&larr; Back to the guide</a>
+  <h1>Variable Income &amp; Holding Account</h1>
+  <p>For paychecks that are never the same twice. See Chapter 4.</p>
+</header>
+<main>
+<form>
+  <h2>1. Find your Baseline</h2>
+  <p>List your last 6 months of take-home pay, one number per box. Go for good-enough, not perfect.</p>
+  <table class="fill median">
+    <thead><tr><th>Mo 1</th><th>Mo 2</th><th>Mo 3</th><th>Mo 4</th><th>Mo 5</th><th>Mo 6</th><th>Suggested Baseline (median)</th></tr></thead>
+    <tbody>
+      <tr class="median-row">
+        <td><input type="number" data-median></td>
+        <td><input type="number" data-median></td>
+        <td><input type="number" data-median></td>
+        <td><input type="number" data-median></td>
+        <td><input type="number" data-median></td>
+        <td><input type="number" data-median></td>
+        <td><output data-median-output>&mdash;</output></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="fill">
+    <tbody>
+      <tr><th class="rowlabel">My Baseline (the median, or the "pretty sure I'll clear it" number)</th><td><input placeholder="$2,400"></td></tr>
+      <tr><th class="rowlabel">Baseline covers on paper every month</th><td><input placeholder="Bills, groceries, gas, phone, funds, splurge, buffer"></td></tr>
+      <tr><th class="rowlabel">Holding Account current balance</th><td><input placeholder="$310 of $2,400 seeded"></td></tr>
+      <tr><th class="rowlabel">Holding Account target (one Baseline month)</th><td><input placeholder="$2,400"></td></tr>
+    </tbody>
+  </table>
+  <h2>2. Payday routine (same every payday, big or small)</h2>
+  <ol class="rules">
+    <li>All paycheck lands in the <strong>Holding Account</strong> first (direct deposit there, if you can).</li>
+    <li>Transfer my <strong>Baseline</strong> amount to checking. Checking life stays boring.</li>
+  </ol>
+  <h2>3. My standing surplus order (decide once, in advance)</h2>
+  <table class="fill">
+    <tbody>
+      <tr><th class="rowlabel">1st</th><td><input value="Refill Holding Account to one Baseline month"></td></tr>
+      <tr><th class="rowlabel">2nd</th><td><input placeholder="Feed the thinnest sinking fund"></td></tr>
+      <tr><th class="rowlabel">3rd</th><td><input placeholder="A slice just for me (I earned it)"></td></tr>
+    </tbody>
+  </table>
+  <h2>4. Shift-worker notes to my future self</h2>
+  <textarea rows="3" placeholder="Extras to treat as surplus, not baseline: e.g. weekend differentials, per-diem weeks, that one double I always regret."></textarea>
+</form>
+</main>
+<script src="../assets/worksheets.js"></script>
+<footer>
+  <button data-action="print">Print</button>
+  <button data-action="clear">Clear this page</button>
+  <span class="foot-note">Saves in this browser only. Nothing is uploaded. Household Budget Basics — Asdale Dynamics, LLC</span>
+</footer>
+</body>
+</html>
